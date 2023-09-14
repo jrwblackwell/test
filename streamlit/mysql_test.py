@@ -1,11 +1,10 @@
 import pandas as pd
 import streamlit as st
-import sqlalchemy
 
-conn = st.experimental_connection('mysql', type='sql')
+# conn = st.experimental_connection('mysql', type='sql')
 
-# Perform query.
-df = conn.query('SELECT * FROM PO_LINE;', ttl=600)
+# # Perform query.
+# df = conn.query('SELECT * FROM PO_LINE;', ttl=600)
 
 st.title('MySQL Streamlit App Test') 
 
