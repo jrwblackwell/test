@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import sqlalchemy
 
 conn = st.experimental_connection('mysql', type='sql')
 
