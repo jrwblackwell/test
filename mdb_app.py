@@ -7,6 +7,7 @@ import pandas as pd
 uri = "mongodb+srv://jrwblackwell1998:gemini98@cluster0.zdpbyk2.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp"
 
 # Create a new client and connect to the server
+@st.cache_resource
 client = MongoClient(uri)
 
 # Send a ping to confirm a successful connection
