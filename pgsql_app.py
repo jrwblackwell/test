@@ -1,5 +1,4 @@
 import streamlit as st
-import psycopg2
 
 # Initialize connection.
 conn = st.experimental_connection("postgresql", type="sql")
