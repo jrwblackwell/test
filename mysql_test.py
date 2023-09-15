@@ -2,13 +2,13 @@ import pymysql
 import pandas as pd
 import streamlit as st
 
-connection = pymysql.connect(host='127.0.0.1',
+connection = pymysql.connect(host='localhost',
                             port=3306,
                             user='root',
                             passwd='gemini98',
                             db='Sales')
 
-sql_query = f'SELECT * FROM Shippers' 
+sql_query = f'SELECT * FROM salary_journey;' 
 
 with connection.cursor() as cursor:
     cursor.execute(sql_query)
