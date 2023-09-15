@@ -6,8 +6,7 @@ connection = pymysql.connect(host='127.0.0.1',
                             port=3306,
                             user='root',
                             passwd='gemini98',
-                            db='Sales',
-                            cursorclass=pymysql.cursors.DictCursor)
+                            db='Sales')
 
 sql_query = f'SELECT * FROM Shippers' 
 
