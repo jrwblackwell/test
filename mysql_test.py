@@ -2,11 +2,11 @@ import pymysql
 import pandas as pd
 import streamlit as st
 
-connection = pymysql.connect(host='localhost:3306',
+connection = pymysql.connect(host='localhost',
                             # port=3306,
                             user='root',
-                            passwd='gemini98') #,
-                            #db='test_data')
+                            passwd='gemini98'),
+                            db='test_data')
 
 sql_query = f'SELECT * FROM salary_journey;' 
 
