@@ -1,3 +1,4 @@
+import mysql.connector as connection
 import pandas as pd
 import streamlit as st
 import toml
