@@ -8,11 +8,13 @@ conn = st.experimental_connection("supabase",type=SupabaseConnection)
 # Perform query.
 # rows = conn.query("*", table="salary", ttl="10m").execute()
 
-sql =  "select * from salary where client like 'Rock%'"
+rows = conn.query("select * from salary where client like 'Rock%'", table="salary", ttl="10m").execute()
 
-rows = conn.query(sql, table="salary", ttl="10m").execute()
+# sql =  "select * from salary where client like 'Rock%'"
 
-df = pd.DataFrame(rows.data)
+# rows = conn.query(sql, table="salary", ttl="10m").execute()
+
+# df = pd.DataFrame(rows.data)
 
 st.write(df)
 
