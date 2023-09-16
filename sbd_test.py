@@ -8,8 +8,8 @@ conn = st.experimental_connection("supabase",type=SupabaseConnection)
 # Perform query.
 rows = conn.query("*", table="salary", ttl="10m").execute()
 
-# st.write(rows)
+st.write(rows)
 
-df = pd.DataFrame(rows)
+# df = pd.DataFrame(rows)
 
-st.write(df)
+# st.write(df)
