@@ -11,3 +11,6 @@ rows = conn.query("*", table="salary", ttl="10m").execute()
 df = pd.DataFrame(rows.data)
 
 st.write(df)
+
+with st.sidebar:
+  st.write('Finally!')
