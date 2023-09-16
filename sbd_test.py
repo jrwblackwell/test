@@ -16,7 +16,7 @@ rows = conn.query("client, orders, total", table="salary", ttl="10m").eq(
 
 # rows = conn.query(sql, table="salary", ttl="10m").execute()
 
-# df = pd.DataFrame(rows.data)
+df = pd.DataFrame(rows.data)
 
 st.write(df)
 
