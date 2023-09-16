@@ -10,7 +10,7 @@ conn = st.experimental_connection("supabase",type=SupabaseConnection)
 
 sql =  "select * from salary where client like 'Rock%'"
 
-rows = conn.query(sql, ttl="10m").execute()
+rows = conn.query(sql, table="salary", ttl="10m").execute()
 
 df = pd.DataFrame(rows.data)
 
