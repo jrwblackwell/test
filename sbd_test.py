@@ -6,11 +6,13 @@ from st_supabase_connection import SupabaseConnection
 conn = st.experimental_connection("supabase",type=SupabaseConnection)
 
 # Perform query.
-# rows = conn.query("*", table="salary", ttl="10m").execute()
+rows = conn.query("*", table="salary", ttl="10m").execute()
 
-rows = conn.query("client, orders, total", table="salary", ttl="10m").eq(
-        "salary.client", "Rudiger Pharmacy"
-    ).execute()
+st.write(rows)
+
+# rows = conn.query("client, orders, total", table="salary", ttl="10m").eq(
+#         "salary.client", "Rudiger Pharmacy"
+#     ).execute()
 
 # sql =  "select * from salary where client like 'Rock%'"
 
