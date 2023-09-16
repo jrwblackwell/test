@@ -10,9 +10,9 @@ rows = conn.query("*", table="salary", ttl="10m").execute()
 
 st.write(rows)
 
-# rows = conn.query("client, orders, total", table="salary", ttl="10m").eq(
-#         "salary.client", "Rudiger Pharmacy"
-#     ).execute()
+rows = conn.query("Client, Orders, Total", table="salary", ttl="10m").eq(
+        "Client", "Rudiger Pharmacy"
+    ).execute()
 
 # sql =  "select * from salary where client like 'Rock%'"
 
