@@ -10,6 +10,6 @@ rows = conn.query("*", table="salary", ttl="10m").execute()
 
 st.write(rows)
 
-# df = pd.DataFrame(rows)
+df = pd.DataFrame.from_dict(data)
 
-# st.write(df)
+st.write(df)
